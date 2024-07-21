@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white; 
+    margin: 0;
+    padding: 0;
+}
+
+.container-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    min-height: 400px;
+    max-height: 650px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1; 
+}
+
+
+.images-wrapper {
+    position: absolute; 
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%); 
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-image {
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    transform: translateX(-100%); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.payment-image.active {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+.input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.title_option {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.input_card {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333; 
+}
+
+label {
+    color: #555;
+}
+
+#options_payment {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option_payment {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%; 
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.option_payment:hover {
+    background-color: #ddd;
+}
+
+.option_payment.active {
+    background-color: #aaa; 
+}
+
+.information {
+    text-align: flex-start;
+    margin: 20px 0;
+}
+
+.information button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.information button:hover {
+    background-color: #0056b3;
+}
+
+.payment_panel {
+    display: none;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.payment_panel.active {
+    display: block; 
+}
+
+.input_pix, .input_card, .total, .total_button {
+    margin: 10px 0;
+}
+
+.input_standard {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; 
+}
+
+.pay_button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 300px;
+}
+
+.pay_button:hover {
+    background-color: #218838;
+}
+
+.alert-container {
+    display: flex;
+    align-items: center;
+    position: fixed; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.alert {
+    display: none; 
+    color: red;
+    text-align: center;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+#mensagem_sucesso {
+    color: green;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.card_icon img, #invalid_card_number {
+    display: none; 
+}
+
+.card_input_icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card_input_icon img {
+    width: 40px; 
+}
+
+#icon_1234.active, #icon_4321.active, #invalid_card_number.active {
+    display: inline; 
+}
+
+#total_card, #total_pix {
+    font-weight: bold;
+    color: #333;
+}
